@@ -1,4 +1,4 @@
-package com.financialtracker.app.presentation
+package com.budgetwise.financial.presentation
 
 import android.content.Context
 import android.content.Intent
@@ -48,10 +48,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.content.FileProvider
-import com.budgetwise.financial.presentation.MainEvent
-import com.financialtracker.app.R
-import com.financialtracker.app.ui.theme.baseBackground
-import com.financialtracker.app.ui.theme.white
+import com.budgetwise.financial.R
+import com.budgetwise.financial.ui.theme.baseBackground
+import com.budgetwise.financial.ui.theme.secondText
+import com.budgetwise.financial.ui.theme.white
 import java.io.File
 import java.io.IOException
 
@@ -87,7 +87,7 @@ fun WebViewScreen(
         topBar = {
             TopAppBar(
                 colors = TopAppBarDefaults.smallTopAppBarColors(
-                    containerColor = baseBackground
+                    containerColor = white
                 ),
                 title = {
                     Row(
@@ -99,17 +99,17 @@ fun WebViewScreen(
                             onEvent(MainEvent.Reconnect)
                         }) {
                             Icon(
-                                imageVector = ImageVector.vectorResource(id = R.drawable.baseline_arrow_back_ios_new_24),
-                                tint = white,
+                                imageVector = ImageVector.vectorResource(id = R.drawable.baseline_arrow_back_24),
+                                tint = secondText,
                                 contentDescription = ""
                             )
                         }
                         Spacer(modifier = modifier.width(15.dp))
                         Text(
-                            color = white,
-                            fontStyle = FontStyle(R.font.gotham),
-                            fontSize = 20.sp,
-                            fontWeight = FontWeight(400),
+                            color = secondText,
+                            fontStyle = FontStyle(R.font.montserrat),
+                            fontSize = 16.sp,
+                            fontWeight = FontWeight(500),
                             text = offerName
                         )
                     }

@@ -22,7 +22,6 @@ import com.budgetwise.financial.data.LINK
 import com.budgetwise.financial.data.SHARED_APPSFLYER_INSTANCE_ID
 import com.budgetwise.financial.data.SHARED_DATA
 import com.budgetwise.financial.ui.theme.Ml_12Theme
-import com.financialtracker.app.presentation.Sample
 import com.my.tracker.MyTracker
 import dagger.hilt.android.AndroidEntryPoint
 

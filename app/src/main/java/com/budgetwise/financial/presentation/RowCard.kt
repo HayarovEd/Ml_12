@@ -1,4 +1,4 @@
-package com.financialtracker.app.presentation
+package com.budgetwise.financial.presentation
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -9,7 +9,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
-import com.financialtracker.app.R
+import com.budgetwise.financial.R
 import com.budgetwise.financial.data.VALUE_ONE
 
 @Composable

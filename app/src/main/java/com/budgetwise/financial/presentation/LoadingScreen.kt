@@ -1,4 +1,4 @@
-package com.financialtracker.app.presentation
+package com.budgetwise.financial.presentation
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -9,8 +9,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.financialtracker.app.ui.theme.baseBackground
-import com.financialtracker.app.ui.theme.green
+import com.budgetwise.financial.ui.theme.baseBackground
+import com.budgetwise.financial.ui.theme.blue
 
 @Composable
 fun LoadingScreen(
@@ -24,7 +24,7 @@ fun LoadingScreen(
     ) {
         CircularProgressIndicator(
             modifier = modifier.size(100.dp),
-            color = green
+            color = blue
         )
     }
 }

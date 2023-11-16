@@ -1,4 +1,4 @@
-package com.financialtracker.app.presentation
+package com.budgetwise.financial.presentation
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
@@ -30,12 +31,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.budgetwise.financial.presentation.MainEvent
-import com.financialtracker.app.R
+import com.budgetwise.financial.R
 import com.budgetwise.financial.presentation.MainEvent.Reconnect
-import com.financialtracker.app.ui.theme.baseBackground
-import com.financialtracker.app.ui.theme.green
-import com.financialtracker.app.ui.theme.white
+import com.budgetwise.financial.ui.theme.blue
+import com.budgetwise.financial.ui.theme.thirdText
+import com.budgetwise.financial.ui.theme.white
 
 @Composable
 fun NoInternetScreen(
@@ -45,8 +45,8 @@ fun NoInternetScreen(
     Box (
         modifier = modifier
             .fillMaxSize()
-            .background(color = baseBackground)
-            .padding(16.dp)
+            .background(color = white)
+            .padding(15.dp)
     ) {
         Column (
             modifier = modifier.align(alignment = Alignment.Center),
@@ -57,26 +57,26 @@ fun NoInternetScreen(
                 painter = painterResource(
                 id = R.drawable.no_connection),
                 contentDescription = "")
-            Spacer(modifier = modifier.height(44.dp))
+            Spacer(modifier = modifier.height(30.dp))
             Text(
                 text = stringResource(id = R.string.not_connect),
-                fontSize = 24.sp,
-                fontWeight = FontWeight(500),
-                fontStyle = FontStyle(R.font.gotham),
-                color = green,
+                fontSize = 20.sp,
+                fontWeight = FontWeight(600),
+                fontStyle = FontStyle(R.font.montserrat),
+                color = blue,
                 textAlign = TextAlign.Center
             )
-            Spacer(modifier = modifier.height(43.dp))
+            Spacer(modifier = modifier.height(15.dp))
             Text(
                 text = stringResource(id = R.string.try_internet),
-                fontSize = 16.sp,
-                fontWeight = FontWeight(400),
-                fontStyle = FontStyle(R.font.gotham),
-                color = white,
+                fontSize = 14.sp,
+                fontWeight = FontWeight(500),
+                fontStyle = FontStyle(R.font.montserrat),
+                color = thirdText,
                 textAlign = TextAlign.Center
             )
-            Spacer(modifier = modifier.height(64.dp))
-            /*Button(
+            /*Spacer(modifier = modifier.height(64.dp))
+            Button(
                 modifier = modifier
                     .fillMaxWidth(),
                 shape = RoundedCornerShape(25.dp),
@@ -99,30 +99,30 @@ fun NoInternetScreen(
                 )
             }*/
         }
-        OutlinedButton(
+        Button(
             modifier = modifier
                 .fillMaxWidth()
                 .align(alignment = Alignment.BottomCenter),
-            shape = RoundedCornerShape(8.dp),
-            border = BorderStroke(
+            shape = RoundedCornerShape(10.dp),
+            /*border = BorderStroke(
                 width = 1.dp,
                 color = green
-            ),
+            ),*/
             contentPadding = PaddingValues(
-                vertical = 16.dp
+                vertical = 12.dp
             ),
             colors = ButtonDefaults.outlinedButtonColors(
-                containerColor = baseBackground,
-                contentColor = green,
+                containerColor = blue,
+                contentColor = white,
             ),
             onClick = { onEvent(Reconnect) }
         ) {
             Text(
                 text = stringResource(id = R.string.reconnect),
                 style = TextStyle(
-                    fontSize = 20.sp,
-                    fontFamily = FontFamily(Font(R.font.gotham)),
-                    fontWeight = FontWeight(700),
+                    fontSize = 15.sp,
+                    fontFamily = FontFamily(Font(R.font.montserrat)),
+                    fontWeight = FontWeight(600),
                 )
             )
         }

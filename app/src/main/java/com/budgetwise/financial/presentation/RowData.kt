@@ -1,4 +1,4 @@
-package com.financialtracker.app.presentation
+package com.budgetwise.financial.presentation
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -10,46 +10,42 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.financialtracker.app.R
-import com.financialtracker.app.ui.theme.baseBackground
-import com.financialtracker.app.ui.theme.cardColor
-import com.financialtracker.app.ui.theme.white
+import com.budgetwise.financial.R
+import com.budgetwise.financial.ui.theme.baseBackground
+import com.budgetwise.financial.ui.theme.secondText
 
 @Composable
 fun RowData(
     modifier: Modifier = Modifier,
     title: String,
     content: String,
-    colorBack: Color = cardColor
 ) {
     Row (
         modifier = modifier
             .fillMaxWidth()
-            .background(color = colorBack)
+            .background(color = baseBackground)
             .padding(vertical = 7.dp),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
         Text(
-            color = white,
-            fontStyle = FontStyle(R.font.gotham),
-            fontSize = 16.sp,
+            color = secondText,
+            fontStyle = FontStyle(R.font.montserrat),
+            fontSize = 13.sp,
             fontWeight = FontWeight(400),
             text = title,
             textAlign = TextAlign.Start
         )
         Text(
-            color = white,
-            fontStyle = FontStyle(R.font.gotham),
-            fontSize = 16.sp,
-            fontWeight = FontWeight(600),
+            color = secondText,
+            fontStyle = FontStyle(R.font.montserrat),
+            fontSize = 13.sp,
+            fontWeight = FontWeight(400),
             text = content,
             textAlign = TextAlign.End
         )

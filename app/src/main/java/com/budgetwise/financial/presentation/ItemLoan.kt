@@ -27,6 +27,8 @@ import com.budgetwise.financial.domain.model.StatusApplication
 import com.budgetwise.financial.domain.model.basedto.BaseState
 import com.budgetwise.financial.domain.model.basedto.Loan
 import com.budgetwise.financial.presentation.MainEvent
+import com.budgetwise.financial.presentation.RowCard
+import com.budgetwise.financial.presentation.RowData
 import com.financialtracker.app.ui.theme.cardColor
 import com.financialtracker.app.ui.theme.green
 

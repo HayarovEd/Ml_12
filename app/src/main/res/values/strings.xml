@@ -14,7 +14,7 @@
     <string name="checkout">Оформить</string>
 
     //No Internet
-    <string name="not_connect">Нет соединения</string>
-    <string name="try_internet">Проверьте интернет-соединение\nи попробуйте ещё раз</string>
-    <string name="reconnect">ПЕРЕПОДКЛЮЧИТЬСЯ</string>
+    <string name="not_connect">Проблемы с подключением</string>
+    <string name="try_internet">Проверьте подключение к Интернету и\nповторите попытку.</string>
+    <string name="reconnect">Попробовать еще раз</string>
 </resources>

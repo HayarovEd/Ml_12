@@ -1,4 +1,4 @@
-package com.financialtracker.app.presentation
+package com.budgetwise.financial.presentation
 
 import android.os.Build
 import android.widget.Toast
@@ -15,7 +15,6 @@ import com.budgetwise.financial.domain.model.TypeCard
 import com.budgetwise.financial.domain.model.basedto.BaseState
 import com.budgetwise.financial.presentation.MainEvent.OnChangeBaseState
 import com.budgetwise.financial.presentation.MainEvent.OnChangeStatusApplication
-import com.budgetwise.financial.presentation.MainViewModel
 
 @RequiresApi(Build.VERSION_CODES.TIRAMISU)
 @Composable

@@ -1,4 +1,4 @@
-package com.financialtracker.app.presentation
+package com.budgetwise.financial.presentation
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -6,9 +6,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyListState
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -16,22 +14,19 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.financialtracker.app.R
-import com.financialtracker.app.R.string
+import com.budgetwise.financial.R.drawable
+import com.budgetwise.financial.R
+import com.budgetwise.financial.R.string
 import com.budgetwise.financial.data.VALUE_ONE
 import com.budgetwise.financial.domain.model.basedto.BaseDto
 import com.budgetwise.financial.domain.model.basedto.BaseState
@@ -41,11 +36,11 @@ import com.budgetwise.financial.domain.model.basedto.BaseState.Loans
 import com.budgetwise.financial.domain.model.basedto.CardsCredit
 import com.budgetwise.financial.domain.model.basedto.CardsDebit
 import com.budgetwise.financial.domain.model.basedto.CardsInstallment
-import com.budgetwise.financial.presentation.MainEvent
-import com.financialtracker.app.ui.theme.baseBackground
-import com.financialtracker.app.ui.theme.green
-import com.financialtracker.app.ui.theme.grey
-import com.financialtracker.app.ui.theme.white
+import com.budgetwise.financial.ui.theme.blue
+import com.budgetwise.financial.ui.theme.grey
+import com.budgetwise.financial.ui.theme.white
+import com.financialtracker.app.presentation.Credits
+import com.financialtracker.app.presentation.Loans
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -78,7 +73,7 @@ fun ConnectScreen(
     Scaffold(
         modifier = modifier
             .fillMaxSize(),
-        topBar = {
+        /*topBar = {
             TopAppBar(
                 title = {
                     Row(
@@ -95,24 +90,24 @@ fun ConnectScreen(
                             fontWeight = FontWeight(400),
                             text = title
                         )
-                        /*IconButton(onClick = onClickRules) {
+                        *//*IconButton(onClick = onClickRules) {
                             Icon(
                                 imageVector = ImageVector.vectorResource(id = R.drawable.info),
                                 tint = black,
                                 contentDescription = "")
-                        }*/
+                        }*//*
                     }
                 },
                 colors = TopAppBarDefaults.smallTopAppBarColors(
                     containerColor = baseBackground
                 )
             )
-        },
+        },*/
         bottomBar = {
             BottomAppBar(
-                containerColor = baseBackground,
+                containerColor = white,
                 modifier = modifier
-                    .clip(shape = RoundedCornerShape(topStart = 20.dp, topEnd = 20.dp))
+                    //.clip(shape = RoundedCornerShape(topStart = 20.dp, topEnd = 20.dp))
             ) {
                 Row(
                     modifier = modifier
@@ -143,7 +138,7 @@ fun ConnectScreen(
                     }
                     if (!db.loans.isNullOrEmpty()) {
                         ItemBottomBar(
-                            color = if (baseState is Loans) green else grey,
+                            color = if (baseState is Loans) blue else grey,
                             content = stringResource(id = string.loans),
                             icon = ImageVector.vectorResource(id = drawable.credits),
                             onClick = onClickLoans
@@ -151,7 +146,7 @@ fun ConnectScreen(
                     }
                     if (!db.cards.isNullOrEmpty()) {
                         ItemBottomBar(
-                            color = if (baseState is Cards) green else grey,
+                            color = if (baseState is Cards) blue else grey,
                             content = stringResource(id = string.cards),
                             icon = ImageVector.vectorResource(id = drawable.cards),
                             onClick = onClickCards
@@ -159,7 +154,7 @@ fun ConnectScreen(
                     }
                     if (!db.credits.isNullOrEmpty()) {
                         ItemBottomBar(
-                            color = if (baseState is Credits) green else grey,
+                            color = if (baseState is Credits) blue else grey,
                             content = stringResource(id = string.credits),
                             icon = ImageVector.vectorResource(id = drawable.credits),
                             onClick = onClickCredits
@@ -235,7 +230,7 @@ fun ItemBottomBar(
         }
         Text(
             color = color,
-            fontStyle = FontStyle(R.font.gotham),
+            fontStyle = FontStyle(R.font.montserrat),
             fontSize = 11.sp,
             fontWeight = FontWeight(700),
             text = content
