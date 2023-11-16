@@ -1,7 +1,14 @@
-package com.financialtracker.app.data
+package com.budgetwise.financial.data
 
 import android.app.Application
 import android.content.Context
+import com.budgetwise.financial.data.SHARED_APPSFLYER_INSTANCE_ID
+import com.budgetwise.financial.data.SHARED_DATA
+import com.budgetwise.financial.data.SHARED_DATE
+import com.budgetwise.financial.data.SHARED_FIREBASE_TOKEN
+import com.budgetwise.financial.data.SHARED_MY_TRACKER_INSTANCE_ID
+import com.budgetwise.financial.data.SHARED_SUB2
+import com.budgetwise.financial.data.SHARED_YANDEX_DEVICE_ID
 import com.budgetwise.financial.domain.SharedKepper
 import javax.inject.Inject
 

@@ -13,8 +13,9 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.budgetwise.financial.domain.model.StatusApplication
 import com.budgetwise.financial.domain.model.TypeCard
 import com.budgetwise.financial.domain.model.basedto.BaseState
-import com.financialtracker.app.presentation.MainEvent.OnChangeBaseState
-import com.financialtracker.app.presentation.MainEvent.OnChangeStatusApplication
+import com.budgetwise.financial.presentation.MainEvent.OnChangeBaseState
+import com.budgetwise.financial.presentation.MainEvent.OnChangeStatusApplication
+import com.budgetwise.financial.presentation.MainViewModel
 
 @RequiresApi(Build.VERSION_CODES.TIRAMISU)
 @Composable

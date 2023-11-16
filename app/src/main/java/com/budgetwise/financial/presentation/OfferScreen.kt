@@ -45,10 +45,11 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.text.HtmlCompat
 import coil.compose.AsyncImage
 import com.financialtracker.app.R
-import com.financialtracker.app.data.VALUE_ONE
+import com.budgetwise.financial.data.VALUE_ONE
 import com.budgetwise.financial.domain.model.ElementOffer
 import com.budgetwise.financial.domain.model.StatusApplication
 import com.budgetwise.financial.domain.model.basedto.BaseState
+import com.budgetwise.financial.presentation.MainEvent
 import com.financialtracker.app.ui.theme.baseBackground
 import com.financialtracker.app.ui.theme.green
 import com.financialtracker.app.ui.theme.secondText

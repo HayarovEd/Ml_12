@@ -1,6 +1,9 @@
 package com.budgetwise.financial
 
 import android.app.Application
+import com.budgetwise.financial.data.APP_METRICA
+import com.budgetwise.financial.data.MY_TRACKER
+import com.budgetwise.financial.data.USER_X
 import com.my.tracker.MyTracker
 import com.yandex.metrica.YandexMetrica
 import com.yandex.metrica.YandexMetricaConfig

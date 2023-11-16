@@ -1,13 +1,13 @@
-package com.financialtracker.app.di
+package com.budgetwise.financial.di
 
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import com.financialtracker.app.data.ApiAnalytic
-import com.financialtracker.app.data.ApiServer
-import com.financialtracker.app.data.URL_ANALYTICS
-import com.financialtracker.app.data.URL_SERVER
+import com.budgetwise.financial.data.ApiAnalytic
+import com.budgetwise.financial.data.ApiServer
+import com.budgetwise.financial.data.URL_ANALYTICS
+import com.budgetwise.financial.data.URL_SERVER
 import javax.inject.Singleton
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

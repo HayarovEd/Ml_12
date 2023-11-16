@@ -1,4 +1,4 @@
-package com.financialtracker.app.presentation
+package com.budgetwise.financial.presentation
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -17,11 +17,12 @@ import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import com.appsflyer.AppsFlyerConversionListener
 import com.appsflyer.AppsFlyerLib
-import com.financialtracker.app.data.APPS_FLYER
-import com.financialtracker.app.data.LINK
-import com.financialtracker.app.data.SHARED_APPSFLYER_INSTANCE_ID
-import com.financialtracker.app.data.SHARED_DATA
-import com.financialtracker.app.ui.theme.Ml_11Theme
+import com.budgetwise.financial.data.APPS_FLYER
+import com.budgetwise.financial.data.LINK
+import com.budgetwise.financial.data.SHARED_APPSFLYER_INSTANCE_ID
+import com.budgetwise.financial.data.SHARED_DATA
+import com.budgetwise.financial.ui.theme.Ml_12Theme
+import com.financialtracker.app.presentation.Sample
 import com.my.tracker.MyTracker
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -99,7 +100,7 @@ class MainActivity : ComponentActivity() {
         AppsFlyerLib.getInstance().init(APPS_FLYER, conversionDataListener, this)
         AppsFlyerLib.getInstance().start(this)
         setContent {
-            Ml_11Theme {
+            Ml_12Theme {
                 Sample(
                     viewModel = viewModel,
                 )

@@ -1,4 +1,4 @@
-package com.financialtracker.app.data
+package com.budgetwise.financial.data
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -9,8 +9,8 @@ import android.media.RingtoneManager
 import android.os.Build
 import android.util.Log
 import androidx.core.app.NotificationCompat
-import com.financialtracker.app.R
-import com.financialtracker.app.presentation.MainActivity
+import com.budgetwise.financial.R
+import com.budgetwise.financial.presentation.MainActivity
 import com.huawei.hms.push.HmsMessageService
 import com.huawei.hms.push.RemoteMessage
 

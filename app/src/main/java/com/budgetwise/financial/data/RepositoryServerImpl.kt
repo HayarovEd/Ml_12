@@ -1,11 +1,11 @@
-package com.financialtracker.app.data
+package com.budgetwise.financial.data
 
 import android.util.Log
 import com.budgetwise.financial.domain.RepositoryServer
 import javax.inject.Inject
 import com.budgetwise.financial.domain.model.basedto.BaseDto
-import com.financialtracker.app.data.Resource.Error
-import com.financialtracker.app.data.Resource.Success
+import com.budgetwise.financial.data.Resource.Error
+import com.budgetwise.financial.data.Resource.Success
 
 class RepositoryServerImpl @Inject constructor(
     private val apiServer: ApiServer

@@ -33,6 +33,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.content.FileProvider
+import com.budgetwise.financial.presentation.MainEvent
 import com.financialtracker.app.ui.theme.baseBackground
 import java.io.File
 import java.io.IOException

@@ -10,7 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 import com.financialtracker.app.R
-import com.financialtracker.app.data.VALUE_ONE
+import com.budgetwise.financial.data.VALUE_ONE
 
 @Composable
 fun RowCard(

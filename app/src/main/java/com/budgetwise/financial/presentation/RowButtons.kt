@@ -31,6 +31,7 @@ import com.financialtracker.app.R
 import com.budgetwise.financial.domain.model.ElementOffer
 import com.budgetwise.financial.domain.model.StatusApplication
 import com.budgetwise.financial.domain.model.basedto.BaseState
+import com.budgetwise.financial.presentation.MainEvent
 import com.financialtracker.app.ui.theme.baseBackground
 import com.financialtracker.app.ui.theme.border
 import com.financialtracker.app.ui.theme.green

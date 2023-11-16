@@ -48,6 +48,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.content.FileProvider
+import com.budgetwise.financial.presentation.MainEvent
 import com.financialtracker.app.R
 import com.financialtracker.app.ui.theme.baseBackground
 import com.financialtracker.app.ui.theme.white

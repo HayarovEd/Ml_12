@@ -33,6 +33,7 @@ import com.budgetwise.financial.domain.model.basedto.BaseState
 import com.budgetwise.financial.domain.model.basedto.CardsCredit
 import com.budgetwise.financial.domain.model.basedto.CardsDebit
 import com.budgetwise.financial.domain.model.basedto.CardsInstallment
+import com.budgetwise.financial.presentation.MainEvent
 import com.financialtracker.app.ui.theme.baseBackground
 import com.financialtracker.app.ui.theme.green
 import com.financialtracker.app.ui.theme.white

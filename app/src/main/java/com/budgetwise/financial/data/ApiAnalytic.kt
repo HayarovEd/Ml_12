@@ -1,4 +1,4 @@
-package com.financialtracker.app.data
+package com.budgetwise.financial.data
 
 import com.budgetwise.financial.domain.model.AffSub1
 import com.budgetwise.financial.domain.model.AffSub2

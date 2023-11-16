@@ -1,4 +1,4 @@
-package com.financialtracker.app.presentation
+package com.budgetwise.financial.presentation
 
 
 import android.util.Log
@@ -6,21 +6,21 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.my.tracker.MyTracker
 import com.yandex.metrica.YandexMetrica
-import com.financialtracker.app.data.APP_METRICA
-import com.financialtracker.app.data.APY_KEY
-import com.financialtracker.app.data.BACKEND_UNAVAILABLE
-import com.financialtracker.app.data.CARDS
-import com.financialtracker.app.data.CREDITS
-import com.financialtracker.app.data.EXTERNAL_LINK
-import com.financialtracker.app.data.ITEM_ID
-import com.financialtracker.app.data.LOANS
-import com.financialtracker.app.data.MORE_DETAILS
-import com.financialtracker.app.data.OFFER_WALL
-import com.financialtracker.app.data.REQUEST_DB
-import com.financialtracker.app.data.Resource
-import com.financialtracker.app.data.URL
-import com.financialtracker.app.data.VALUE_ONE
-import com.financialtracker.app.data.setStatusByPush
+import com.budgetwise.financial.data.APP_METRICA
+import com.budgetwise.financial.data.APY_KEY
+import com.budgetwise.financial.data.BACKEND_UNAVAILABLE
+import com.budgetwise.financial.data.CARDS
+import com.budgetwise.financial.data.CREDITS
+import com.budgetwise.financial.data.EXTERNAL_LINK
+import com.budgetwise.financial.data.ITEM_ID
+import com.budgetwise.financial.data.LOANS
+import com.budgetwise.financial.data.MORE_DETAILS
+import com.budgetwise.financial.data.OFFER_WALL
+import com.budgetwise.financial.data.REQUEST_DB
+import com.budgetwise.financial.data.Resource
+import com.budgetwise.financial.data.URL
+import com.budgetwise.financial.data.VALUE_ONE
+import com.budgetwise.financial.data.setStatusByPush
 import com.budgetwise.financial.domain.RepositoryAnalytic
 import com.budgetwise.financial.domain.RepositoryServer
 import com.budgetwise.financial.domain.Service
@@ -32,8 +32,8 @@ import com.budgetwise.financial.domain.model.basedto.Card
 import com.budgetwise.financial.domain.model.basedto.CardsCredit
 import com.budgetwise.financial.domain.model.basedto.CardsDebit
 import com.budgetwise.financial.domain.model.basedto.CardsInstallment
-import com.financialtracker.app.presentation.MainEvent.OnChangeBaseState
-import com.financialtracker.app.presentation.MainEvent.Reconnect
+import com.budgetwise.financial.presentation.MainEvent.OnChangeBaseState
+import com.budgetwise.financial.presentation.MainEvent.Reconnect
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay

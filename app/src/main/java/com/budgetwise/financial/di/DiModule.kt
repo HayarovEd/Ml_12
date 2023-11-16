@@ -1,13 +1,13 @@
-package com.financialtracker.app.di
+package com.budgetwise.financial.di
 
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import com.financialtracker.app.data.RepositoryAnalyticImpl
-import com.financialtracker.app.data.RepositoryServerImpl
-import com.financialtracker.app.data.ServiceImpl
-import com.financialtracker.app.data.SharedKeeperImpl
+import com.budgetwise.financial.data.RepositoryAnalyticImpl
+import com.budgetwise.financial.data.RepositoryServerImpl
+import com.budgetwise.financial.data.ServiceImpl
+import com.budgetwise.financial.data.SharedKeeperImpl
 import com.budgetwise.financial.domain.RepositoryAnalytic
 import com.budgetwise.financial.domain.RepositoryServer
 import com.budgetwise.financial.domain.Service

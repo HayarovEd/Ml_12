@@ -1,4 +1,4 @@
-package com.financialtracker.app.data
+package com.budgetwise.financial.data
 
 import com.google.gson.Gson
 import com.budgetwise.financial.domain.RepositoryAnalytic
@@ -11,8 +11,8 @@ import com.budgetwise.financial.domain.model.Sub1
 import com.budgetwise.financial.domain.model.Sub2
 import com.budgetwise.financial.domain.model.Sub3
 import com.budgetwise.financial.domain.model.Sub5
-import com.financialtracker.app.data.Resource.Error
-import com.financialtracker.app.data.Resource.Success
+import com.budgetwise.financial.data.Resource.Error
+import com.budgetwise.financial.data.Resource.Success
 
 
 class RepositoryAnalyticImpl @Inject constructor(

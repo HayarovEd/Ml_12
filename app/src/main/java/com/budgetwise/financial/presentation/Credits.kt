@@ -16,6 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.budgetwise.financial.domain.model.basedto.BaseState
 import com.budgetwise.financial.domain.model.basedto.Credit
+import com.budgetwise.financial.presentation.MainEvent
 import com.financialtracker.app.ui.theme.baseBackground
 
 @Composable

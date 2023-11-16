@@ -1,12 +1,13 @@
-package com.financialtracker.app.data
+package com.budgetwise.financial.data
 
-const val APP_METRICA = "4eb31c82-052c-4539-8627-eadba67dc094"
-const val MY_TRACKER = "18091205777286999512"
-const val APY_KEY = "hPjxAcx4nz4bx5+r5lrXsYzrS0G0XDLfiWUyDUw0n79pSDkwXgL5O5wMHw6ZFQ6w5o3sBPqSTuZIljrt4x72GJ0H2R3070+v3Q+f9xip88MNF2UyTFHtIIoeq1cTlKjNXoMiVWoF1H+7BFlW+0aNrn9bZ0skygWOEX9q6HKPoBzKQZ38piZkYJrdmcY5/VmgMQ=="
-const val USER_X = "5170ce42-c1ac-47f4-b9cc-16391996584b"
+const val APP_METRICA = "b931b685-c4e8-42e4-b34e-815e0c6b82fa"
+const val MY_TRACKER = "30296177502548121904"
+const val APY_KEY = "Jz9bswxfEyv32t93d0ZOvbyn0T9jcFu/MqQL1vLT6r4XdUGtgCZURstw8oWPOPd+qudrwgx87+9KLtaf6ZP2E22e0bci2GBqtotO3p6BC8dsjg+NZ92XBxIf/xT1AQhoq1RwxM9HU3ZVLVDxneWSCzN8FS+aVdfkXmJE/qicSdkLrwi9IrBJNdWBOst+VRVkCg=="
+const val USER_X = "2dd46ac9-ac4b-4d17-82e9-feae577c0906"
 const val APPS_FLYER = "jLNYzxQAqxAFeturo6YEAD"
 const val URL_ANALYTICS = "https://analyticsharks.xyz"
 const val URL_SERVER = "https://dkirk3d.cyou/"
+const val APP_ID_HMS = "109640939"
 
 const val SHARED_DATA = "shared_data"
 const val SHARED_FIREBASE_TOKEN = "firebase_token"
@@ -48,8 +49,6 @@ const val NOTIFICATION_ID = "fcm_default_channel"
 const val CHANNEL_NAME = "Firebase Channel"
 const val LINK = "link"
 const val TAG = "AppTag"
-
-const val APP_ID_HMS = "109634289"
 
 const val KEY1 = "key1"
 const val KEY2 = "key2"

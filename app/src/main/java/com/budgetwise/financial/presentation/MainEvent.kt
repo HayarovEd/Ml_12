@@ -1,4 +1,4 @@
-package com.financialtracker.app.presentation
+package com.budgetwise.financial.presentation
 
 import com.budgetwise.financial.domain.model.StatusApplication
 import com.budgetwise.financial.domain.model.TypeCard

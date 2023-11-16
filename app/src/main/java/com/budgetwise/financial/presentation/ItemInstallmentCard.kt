@@ -22,11 +22,12 @@ import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import com.financialtracker.app.ui.theme.green
 import com.financialtracker.app.R
-import com.financialtracker.app.data.VALUE_ONE
+import com.budgetwise.financial.data.VALUE_ONE
 import com.budgetwise.financial.domain.model.ElementOffer
 import com.budgetwise.financial.domain.model.StatusApplication
 import com.budgetwise.financial.domain.model.basedto.BaseState
 import com.budgetwise.financial.domain.model.basedto.CardsInstallment
+import com.budgetwise.financial.presentation.MainEvent
 import com.financialtracker.app.ui.theme.cardColor
 
 @Composable

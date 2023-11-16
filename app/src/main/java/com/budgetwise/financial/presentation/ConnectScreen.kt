@@ -32,7 +32,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.financialtracker.app.R
 import com.financialtracker.app.R.string
-import com.financialtracker.app.data.VALUE_ONE
+import com.budgetwise.financial.data.VALUE_ONE
 import com.budgetwise.financial.domain.model.basedto.BaseDto
 import com.budgetwise.financial.domain.model.basedto.BaseState
 import com.budgetwise.financial.domain.model.basedto.BaseState.Cards
@@ -41,6 +41,7 @@ import com.budgetwise.financial.domain.model.basedto.BaseState.Loans
 import com.budgetwise.financial.domain.model.basedto.CardsCredit
 import com.budgetwise.financial.domain.model.basedto.CardsDebit
 import com.budgetwise.financial.domain.model.basedto.CardsInstallment
+import com.budgetwise.financial.presentation.MainEvent
 import com.financialtracker.app.ui.theme.baseBackground
 import com.financialtracker.app.ui.theme.green
 import com.financialtracker.app.ui.theme.grey

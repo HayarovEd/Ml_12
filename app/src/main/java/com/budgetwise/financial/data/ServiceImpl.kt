@@ -1,4 +1,4 @@
-package com.financialtracker.app.data
+package com.budgetwise.financial.data
 
 import android.annotation.SuppressLint
 import android.app.Application
