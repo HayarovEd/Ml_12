@@ -18,6 +18,7 @@ import androidx.compose.ui.unit.sp
 import com.budgetwise.financial.R
 import com.budgetwise.financial.ui.theme.baseBackground
 import com.budgetwise.financial.ui.theme.secondText
+import com.budgetwise.financial.ui.theme.white
 
 @Composable
 fun RowData(
@@ -28,7 +29,7 @@ fun RowData(
     Row (
         modifier = modifier
             .fillMaxWidth()
-            .background(color = baseBackground)
+            .background(color = white)
             .padding(vertical = 7.dp),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically

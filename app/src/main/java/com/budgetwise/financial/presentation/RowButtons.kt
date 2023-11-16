@@ -24,6 +24,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.budgetwise.financial.R
@@ -121,13 +122,15 @@ fun RowButtons(
                 .padding(vertical = 17.dp, horizontal = 16.dp)
         ) {
             Text(
+                modifier = modifier.fillMaxWidth(),
                 text = stringResource(id = R.string.checkout),
                 style = TextStyle(
                     fontSize = 15.sp,
                     fontFamily = FontFamily(Font(R.font.montserrat)),
                     fontWeight = FontWeight(600),
                 ),
-                color = white
+                color = white,
+                textAlign = TextAlign.Center
             )
         }
     }

@@ -141,13 +141,13 @@ fun OfferScreen(
         Column(
             modifier = modifier
                 .padding(paddingValues)
+                .verticalScroll(rememberScrollState())
                 .fillMaxSize()
                 .background(color = baseBackground)
-                .padding(15.dp)
+                .padding(horizontal = 15.dp, vertical = 5.dp)
                 .clip(shape = RoundedCornerShape(20.dp))
                 .background(color = white)
-                .padding(13.dp)
-                .verticalScroll(rememberScrollState()),
+                .padding(13.dp),
         ) {
             AsyncImage(
                 modifier = modifier
