@@ -39,8 +39,6 @@ import com.budgetwise.financial.domain.model.basedto.CardsInstallment
 import com.budgetwise.financial.ui.theme.blue
 import com.budgetwise.financial.ui.theme.grey
 import com.budgetwise.financial.ui.theme.white
-import com.financialtracker.app.presentation.Credits
-import com.financialtracker.app.presentation.Loans
 
 
 @OptIn(ExperimentalMaterial3Api::class)

@@ -1,5 +1,5 @@
 
-package com.financialtracker.app.presentation
+package com.budgetwise.financial.presentation
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -9,10 +9,12 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Divider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
@@ -20,17 +22,15 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
-import com.financialtracker.app.R
+import com.budgetwise.financial.R
 import com.budgetwise.financial.data.VALUE_ONE
 import com.budgetwise.financial.domain.model.ElementOffer
 import com.budgetwise.financial.domain.model.StatusApplication
 import com.budgetwise.financial.domain.model.basedto.BaseState
 import com.budgetwise.financial.domain.model.basedto.Credit
-import com.budgetwise.financial.presentation.MainEvent
-import com.budgetwise.financial.presentation.RowCard
-import com.budgetwise.financial.presentation.RowData
-import com.financialtracker.app.ui.theme.cardColor
-import com.financialtracker.app.ui.theme.green
+import com.budgetwise.financial.ui.theme.baseText
+import com.budgetwise.financial.ui.theme.grey
+import com.budgetwise.financial.ui.theme.white
 
 @Composable
 fun ItemCredit(
@@ -42,10 +42,15 @@ fun ItemCredit(
     Column(
         modifier = modifier
             .fillMaxWidth()
+            .shadow(
+                elevation = 20.dp,
+                spotColor = grey,
+                ambientColor = grey,
+                shape = RoundedCornerShape(16.dp))
             //.border(width = 3.dp, color = grey, shape = RoundedCornerShape(15.dp))
-            .clip(shape = RoundedCornerShape(25.dp))
-            .background(color = cardColor)
-            .padding(16.dp)
+            .clip(shape = RoundedCornerShape(16.dp))
+            .background(color = white)
+            .padding(13.dp)
     ) {
         AsyncImage(
             modifier = modifier
@@ -82,12 +87,12 @@ fun ItemCredit(
             contentScale = ContentScale.FillWidth,
             contentDescription = ""
         )
-        Spacer(modifier = modifier.height(13.dp))
+        Spacer(modifier = modifier.height(20.dp))
         Text(
-            color = green,
-            fontStyle = FontStyle(R.font.gotham),
-            fontSize = 18.sp,
-            fontWeight = FontWeight(500),
+            color = baseText,
+            fontStyle = FontStyle(R.font.montserrat),
+            fontSize = 15.sp,
+            fontWeight = FontWeight(600),
             text = credit.name
         )
         /*Row(
@@ -112,20 +117,28 @@ fun ItemCredit(
             content = credit.summPrefix +" " + credit.summMin +" " + credit.summMid +" " + credit.summMax +" " + credit.summPostfix
         )
         if (credit.hidePercentFields == VALUE_ONE) {
-            Spacer(modifier = modifier.height(8.dp))
+            //Spacer(modifier = modifier.height(8.dp))
+            Divider(
+                thickness = 1.dp,
+                color = grey
+            )
             RowData(
                 title = stringResource(id = R.string.bet),
                 content = credit.percentPrefix +" " + credit.percent +" " + credit.percentPostfix
             )
         }
         if (credit.hideTermFields == VALUE_ONE) {
-            Spacer(modifier = modifier.height(8.dp))
+            //Spacer(modifier = modifier.height(8.dp))
+            Divider(
+                thickness = 1.dp,
+                color = grey
+            )
             RowData(
                 title = stringResource(id = R.string.term),
                 content = credit.termPrefix +" "+ credit.termMin +" " + credit.termMid +" " + credit.termMax +" " + credit.termPostfix
             )
         }
-        Spacer(modifier = modifier.height(13.dp))
+        Spacer(modifier = modifier.height(10.dp))
         RowCard(
             showVisa = credit.showVisa,
             showMaster = credit.showMastercard,

@@ -1,5 +1,5 @@
 
-package com.financialtracker.app.presentation
+package com.budgetwise.financial.presentation
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.background
@@ -17,8 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.budgetwise.financial.domain.model.basedto.BaseState
 import com.budgetwise.financial.domain.model.basedto.Loan
-import com.budgetwise.financial.presentation.MainEvent
-import com.financialtracker.app.ui.theme.baseBackground
+import com.budgetwise.financial.ui.theme.baseBackground
 
 @SuppressLint("CoroutineCreationDuringComposition")
 @Composable
@@ -39,7 +38,7 @@ fun Loans(
         LazyColumn(
             modifier = modifier
                 .fillMaxWidth()
-                .padding(horizontal = 24.dp),
+                .padding(horizontal = 16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp),
             state = loanLazyState
         ) {

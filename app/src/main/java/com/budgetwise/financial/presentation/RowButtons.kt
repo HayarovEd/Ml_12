@@ -1,5 +1,4 @@
-
-package com.financialtracker.app.presentation
+package com.budgetwise.financial.presentation
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -27,15 +26,12 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.financialtracker.app.R
+import com.budgetwise.financial.R
 import com.budgetwise.financial.domain.model.ElementOffer
 import com.budgetwise.financial.domain.model.StatusApplication
 import com.budgetwise.financial.domain.model.basedto.BaseState
-import com.budgetwise.financial.presentation.MainEvent
-import com.financialtracker.app.ui.theme.baseBackground
-import com.financialtracker.app.ui.theme.border
-import com.financialtracker.app.ui.theme.green
-import com.financialtracker.app.ui.theme.secondText
+import com.budgetwise.financial.ui.theme.blue
+import com.budgetwise.financial.ui.theme.white
 
 @Composable
 fun RowButtons(
@@ -58,7 +54,7 @@ fun RowButtons(
     showCache: String,
     showPercent: String,
     showTerm: String,
-    order:String
+    order: String
 ) {
     Row(
         modifier = modifier.fillMaxWidth(),
@@ -68,9 +64,9 @@ fun RowButtons(
         Box(
             modifier = modifier
                 .weight(1f)
-                .border(width = 2.dp, color = border, shape = RoundedCornerShape(8.dp))
-                .clip(shape = RoundedCornerShape(8.dp))
-                .background(color = baseBackground)
+                .border(width = 2.dp, color = blue, shape = RoundedCornerShape(10.dp))
+                .clip(shape = RoundedCornerShape(10.dp))
+                .background(color = white)
                 .clickable(onClick = {
                     onEvent(
                         MainEvent.OnChangeStatusApplication(
@@ -99,12 +95,12 @@ fun RowButtons(
                         )
                     )
                 })
-                .padding(vertical = 13.dp)
+                .padding(vertical = 11.dp)
         ) {
             Icon(
                 modifier = modifier.align(alignment = Alignment.Center),
-                imageVector = ImageVector.vectorResource(id = R.drawable.carbon_overflow),
-                tint = green,
+                imageVector = ImageVector.vectorResource(id = R.drawable.baseline_more_horiz_28),
+                tint = blue,
                 contentDescription = ""
             )
         }
@@ -112,8 +108,8 @@ fun RowButtons(
         Box(
             modifier = modifier
                 .weight(3f)
-                .clip(shape = RoundedCornerShape(8.dp))
-                .background(color = green)
+                .clip(shape = RoundedCornerShape(10.dp))
+                .background(color = blue)
                 .clickable(onClick = {
                     onEvent(
                         MainEvent.OnGoToWeb(
@@ -122,28 +118,17 @@ fun RowButtons(
                         )
                     )
                 })
-                .padding(vertical = 16.dp, horizontal = 16.dp)
+                .padding(vertical = 17.dp, horizontal = 16.dp)
         ) {
-            Row (
-                modifier = modifier
-                    .fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
-            ){
-                Text(
-                    text = stringResource(id = R.string.checkout),
-                    style = TextStyle(
-                        fontSize = 20.sp,
-                        fontFamily = FontFamily(Font(R.font.gotham)),
-                        fontWeight = FontWeight(700),
-                    ),
-                    color = secondText
-                )
-                Icon(
-                    imageVector = ImageVector.vectorResource(id = R.drawable.baseline_arrow_outward_17),
-                    contentDescription = "",
-                    tint = secondText)
-            }
+            Text(
+                text = stringResource(id = R.string.checkout),
+                style = TextStyle(
+                    fontSize = 15.sp,
+                    fontFamily = FontFamily(Font(R.font.montserrat)),
+                    fontWeight = FontWeight(600),
+                ),
+                color = white
+            )
         }
     }
 }

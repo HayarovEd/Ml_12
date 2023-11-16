@@ -1,5 +1,5 @@
 
-package com.financialtracker.app.presentation
+package com.budgetwise.financial.presentation
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -16,8 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.budgetwise.financial.domain.model.basedto.BaseState
 import com.budgetwise.financial.domain.model.basedto.Credit
-import com.budgetwise.financial.presentation.MainEvent
-import com.financialtracker.app.ui.theme.baseBackground
+import com.budgetwise.financial.ui.theme.baseBackground
 
 @Composable
 fun Credits(
@@ -37,7 +36,7 @@ fun Credits(
         LazyColumn(
             modifier = modifier
                 .fillMaxWidth()
-                .padding(horizontal = 24.dp),
+                .padding(horizontal = 16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp),
             state = creditLazyState
         ) {

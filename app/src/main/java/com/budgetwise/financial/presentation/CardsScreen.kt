@@ -1,6 +1,5 @@
 package com.budgetwise.financial.presentation
 
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -37,9 +36,6 @@ import com.budgetwise.financial.ui.theme.baseBackground
 import com.budgetwise.financial.ui.theme.blue
 import com.budgetwise.financial.ui.theme.thirdText
 import com.budgetwise.financial.ui.theme.white
-import com.financialtracker.app.presentation.ItemCreditCard
-import com.financialtracker.app.presentation.ItemDebitCard
-import com.financialtracker.app.presentation.ItemInstallmentCard
 
 @Composable
 fun CardsScreen(
