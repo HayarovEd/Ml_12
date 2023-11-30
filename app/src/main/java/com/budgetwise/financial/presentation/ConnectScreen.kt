@@ -6,6 +6,8 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -15,14 +17,20 @@ import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.budgetwise.financial.R.drawable
 import com.budgetwise.financial.R
@@ -68,6 +76,8 @@ fun ConnectScreen(
         Loans -> stringResource(id = string.loans)
         is BaseState.WebPrimary -> db.appConfig.namePrimary?: ""
     }
+
+    val columnHeight = remember { mutableStateOf( 0.dp) }
     Scaffold(
         modifier = modifier
             .fillMaxSize(),
@@ -120,6 +130,7 @@ fun ConnectScreen(
                             horizontalAlignment = Alignment.CenterHorizontally
                         ) {
                             IconButton(
+                                modifier = modifier.size(72.dp),
                                 onClick = onClickPrimary) {
                                 Image(
                                     imageVector = ImageVector.vectorResource(drawable.money_1),
@@ -138,24 +149,27 @@ fun ConnectScreen(
                         ItemBottomBar(
                             color = if (baseState is Loans) blue else grey,
                             content = stringResource(id = string.loans),
-                            icon = ImageVector.vectorResource(id = drawable.credits),
+                            icon = ImageVector.vectorResource(id = drawable.loans),
+                            columnHeight  = columnHeight,
                             onClick = onClickLoans
                         )
                     }
                     if (!db.cards.isNullOrEmpty()) {
                         ItemBottomBar(
                             color = if (baseState is Cards) blue else grey,
-                            content = stringResource(id = string.cards),
                             icon = ImageVector.vectorResource(id = drawable.cards),
-                            onClick = onClickCards
+                            content = stringResource(id = string.cards),
+                            onClick = onClickCards,
+                            columnHeight = columnHeight
                         )
                     }
                     if (!db.credits.isNullOrEmpty()) {
                         ItemBottomBar(
                             color = if (baseState is Credits) blue else grey,
-                            content = stringResource(id = string.credits),
                             icon = ImageVector.vectorResource(id = drawable.credits),
-                            onClick = onClickCredits
+                            content = stringResource(id = string.credits),
+                            onClick = onClickCredits,
+                            columnHeight = columnHeight
                         )
                     }
                 }
@@ -214,9 +228,13 @@ fun ItemBottomBar(
     color: Color,
     icon: ImageVector,
     content: String,
-    onClick: () -> Unit
+    onClick: () -> Unit,
+    columnHeight: MutableState<Dp>
 ) {
     Column(
+        modifier = Modifier.onGloballyPositioned {layoutCoordinates ->
+            columnHeight.value = layoutCoordinates.size.height.dp
+        },
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         IconButton(
