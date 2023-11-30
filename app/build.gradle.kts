@@ -23,7 +23,7 @@ android {
         }
     }
 
-    /*signingConfigs {
+    signingConfigs {
         getByName("debug") {
             storeFile = file("ID528.keystore")
             keyAlias = "mypass"
@@ -37,7 +37,7 @@ android {
             storePassword = "com.budgetwise.financial"
             enableV2Signing = true
         }
-    }*/
+    }
 
     buildTypes {
         release {
@@ -46,10 +46,10 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            //signingConfig = signingConfigs.getByName("release")
+            signingConfig = signingConfigs.getByName("release")
         }
         debug {
-            //signingConfig = signingConfigs.getByName("debug")
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
     compileOptions {
