@@ -22,6 +22,7 @@ import com.budgetwise.financial.data.LINK
 import com.budgetwise.financial.data.SHARED_APPSFLYER_INSTANCE_ID
 import com.budgetwise.financial.data.SHARED_DATA
 import com.budgetwise.financial.ui.theme.Ml_12Theme
+import com.google.gson.Gson
 import com.my.tracker.MyTracker
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -72,8 +73,9 @@ class MainActivity : ComponentActivity() {
 
         val conversionDataListener = object : AppsFlyerConversionListener {
             override fun onConversionDataSuccess(conversionData: Map<String, Any>) {
-                val appsFlayer =
-                    conversionData.entries.joinToString(separator = ", ") { "${it.key}=${it.value}" }
+                val gson = Gson()
+                val appsFlayer = gson.toJson(conversionData)
+                    //conversionData.entries.joinToString(separator = ", ") { "${it.key}=${it.value}" }
                 Log.d("ASDFGH", "temp -  $appsFlayer")
                 viewModel.loadAFDeeplink(appsFlayer)
             }
